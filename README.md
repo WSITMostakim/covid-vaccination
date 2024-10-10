@@ -4,7 +4,6 @@ To run this project, ensure you have the following installed:
 
 - Composer version >= 2.4.1
 - PHP version >= 8.2
-- Apache server
 - MySQL Database
 
 ## Installation Process
@@ -21,7 +20,12 @@ Follow these steps to get your application up and running:
    ```
 
 3. **Set Up Database Credentials**  
-   Open the `.env` file and add your database credentials, including the database name, username, and password etc.
+   Open the `.env` file and add your data base credentials, including:
+   - DB_HOST
+   - DB_PORT
+   - DB_DATABASE
+   - DB_USERNAME
+   - DB_PASSWORD
 
 4. **Run Migrations and Seed the Database**  
    In the root directory of your project, run the following command to migrate the database and seed it with initial data:
@@ -36,6 +40,9 @@ Follow these steps to get your application up and running:
    - Username
    - Password
    - Mail encryption (e.g., `tls` or `ssl`)
+   - MAIL_FROM_ADDRESS
+   - MAIL_FROM_NAME
+   - and set QUEUE_CONNECTION=database
 2. **Schedule Mail Notifications**  
    In the root directory of your project, run the following command to schedule mail notifications:
    ```bash
