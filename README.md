@@ -54,3 +54,10 @@ Follow these steps to get your application up and running:
 ### Note
 - The mail scheduler is set to run at **9 PM** every day. If you want to change the scheduled time, navigate to `App/Commands/Kernel.php` and update the desired schedule time.
 - To change the mail template, go to `resources/mail.blade.php` and make your desired modifications.
+- To send SMS notifications, first, you need to install SMS API packages in your Laravel application. After that, you can easily incorporate the SMS sending functionality by adding the appropriate SMS sending method within the sendNotification method located in the `App/Jobs/ScheduleJob.php` file. This will allow your application to send SMS notifications seamlessly as part of its scheduled job processes and restart the queue
+```bash
+   php artisan queue:restart
+```
+```bash
+   php artisan queue:work
+```
